@@ -1,0 +1,945 @@
+[
+	
+	
+	
+	
+ //xsa//adds requiredResource 
+  
+	{
+		"name": "Nuclear Submarine",
+		"unitType": "Submarine",
+		"movement": 6,
+		"strength": 50,
+		"range": 3,
+		"rangedStrength": 85,
+		"cost": 425,
+		"requiredTech": "Telecommunications",
+	"requiredResource": "Uranium",//xsa//added requiredResource
+		"uniques": [
+			"[+75]% Strength <when attacking>", 
+			"Can only attack [Water] tiles", 
+			"[+1] Sight", 
+			"Can carry [2] [Missile] units", 
+			"Never appears as a Barbarian unit"],
+		"attackSound": "torpedo"
+	},
+  
+  {
+		// "Hovering unit" unique gives ability to get into impassable tiles - and only that (no vision bonus or flying over ocean)
+		// Unit embarks like any other ground unit and has penalty for attacking over river or from embarked state
+		"name": "Helicopter Gunship",
+		"unitType": "Helicopter",
+		"movement": 6,
+		"strength": 60,
+		"rangedStrength": 60,//xsa//rangeMod
+		"range": 2,//xsa//rangeMod
+		"cost": 425,
+		"requiredTech": "Computers",
+		"requiredResource": "Aluminum",
+		"uniques": [
+			"Can pass through impassable tiles",					   //xsa//added hovering
+			"May travel on Water tiles without embarking",			 //xsa//added hovering
+			"Eliminates combat penalty for attacking across a coast",  //xsa//added hovering
+			"Eliminates combat penalty for attacking over a river",	//xsa//added hovering
+			"[-50]% Strength <when fighting in [Water] tiles>",		//xsa//added hovering
+			
+			"[+100]% Strength <vs [Armored] units>", 
+			"No defensive terrain bonus", 
+			"Can move after attacking",
+				  "All tiles cost 1 movement", 
+			"Ignores Zone of Control", 
+			"Unable to capture cities", 
+			"Never appears as a Barbarian unit"
+		   ],
+  		"attackSound": "machinegun"
+	},
+  
+	{
+		"name": "United Guided Missile",
+		"unitType": "Missile",
+		"movement": 1,
+		"strength": 60,
+		"rangedStrength": 60,
+		"range": 15,
+		"cost": 150,
+//		"requiredTech": "Advanced Ballistics",
+		"uniques": [
+			
+			"Limited to [20] per Civilization"
+			"Never appears as a Barbarian unit",
+			"Only available <for [Human player] Civilizations> <hidden from users>",
+			"[-100]% maintenance costs"
+			],
+		"attackSound": "missile"
+	},
+
+  
+  
+  //xsa//increased range 1～2
+  	{
+		"name": "Gatling Gun",
+		"unitType": "Ranged Gunpowder",
+		"range": 2,//1
+		"movement": 2,
+		"strength": 30,
+		"rangedStrength": 30,
+		"cost": 225,
+		"requiredTech": "Industrialization",
+		"upgradesTo": "Machine Gun",
+		"obsoleteTech": "Ballistics",
+		"attackSound": "machinegun"
+	},
+	{
+		"name": "Machine Gun",
+		"unitType": "Ranged Gunpowder",
+		"range": 2,//1
+		"movement": 2,
+		"strength": 60,
+		"rangedStrength": 60,
+		"cost": 350,
+		"requiredTech": "Ballistics",
+		"upgradesTo": "Mechanized Infantry",
+		"attackSound": "machinegun"
+		// Upgrades to Bazooka in BNW
+	},
+	
+	
+	
+	//xsa//spaceparts//100x costs
+	//reverted to default
+	
+  /* Spaceship Parts */
+
+	// Must be transported to the Capital for launch.
+	// Can be destroyed by any hostile military unit walking in their tile.
+	{
+		"name": "SS Booster",
+		"unitType": "Civilian",
+		"movement": 2,
+		"cost": 750,
+		"requiredTech": "Advanced Ballistics",
+		"requiredResource": "Aluminum",
+		"uniques": [
+		"Spaceship part", 
+		"Cannot be purchased", 
+		"Only available <if [Apollo Program] is constructed>", 
+		"Uncapturable", 
+		"Can be added to [The Spaceship] in the Capital", 
+		"Limited to [3] per Civilization"
+		]
+		// costs 1500 in BNW
+	},
+	{
+		"name": "SS Cockpit",
+		"unitType": "Civilian",
+		"movement": 2,
+		"cost": 750,
+		"requiredTech": "Satellites",
+		"requiredResource": "Aluminum",
+		"uniques": [
+		"Spaceship part", 
+		"Cannot be purchased", 
+		"Only available <if [Apollo Program] is constructed>", 
+		"Uncapturable", 
+		"Can be added to [The Spaceship] in the Capital", 
+		"Limited to [1] per Civilization"]
+		// costs 1500 in BNW
+	},
+	{
+		"name": "SS Engine",
+		"unitType": "Civilian",
+		"movement": 2,
+		"cost": 750,
+		"requiredTech": "Particle Physics",
+		"requiredResource": "Aluminum",
+		"uniques": [
+		"Spaceship part", 
+		"Cannot be purchased", 
+		"Only available <if [Apollo Program] is constructed>", 
+		"Uncapturable", 
+		"Can be added to [The Spaceship] in the Capital", 
+		"Limited to [1] per Civilization"]
+		// costs 1500 in BNW
+	},
+	{
+		"name": "SS Stasis Chamber",
+		"unitType": "Civilian",
+		"movement": 2,
+		"cost": 750,
+		"requiredTech": "Nanotechnology",
+		"requiredResource": "Aluminum",
+		"uniques": [
+		  "Spaceship part", 
+		  "Cannot be purchased", 
+		  "Only available <if [Apollo Program] is constructed>", 
+		  "Uncapturable", 
+		  "Can be added to [The Spaceship] in the Capital", 
+		  "Limited to [1] per Civilization"
+		  ]
+		// costs 1500 in BNW
+	},
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+/*	
+	  //xsa//added//airunit
+  
+	{
+		"name": "Zeppelin",
+		"unitType": "Helicopter",
+		"movement": 5,
+		"strength": 42,
+		"rangedStrength": 35,
+		"interceptRange": 2,
+		"cost": 375,
+		"requiredTech": "Flight",
+		"upgradesTo": "Helicopter Gunship",
+		"obsoleteTech": "Computers",
+		"uniques": [
+			"Uncapturable",
+			"[+2] Sight",
+			"[85]% chance to intercept air attacks",
+			"No defensive terrain bonus", 
+			"Can move after attacking",
+			"[+100]% Strength <vs cities> <when attacking>",
+			"All tiles cost 1 movement", 
+			"Ignores Zone of Control", 
+			"Unable to capture cities", 
+			"Never appears as a Barbarian unit",
+			"Withdraws before melee combat <with [80]% chance>"
+		   ],
+		"attackSound": "bombing"
+  },
+  {
+		"name": "Astronaut",
+		"unitType": "Gunpowder",
+		"movement": 2,
+		"strength": 75,
+		"cost": 425,
+		"requiredTech": "Advanced Ballistics",
+		"uniques": [
+			"Uncapturable",
+			"May Paradrop up to [20] tiles from inside friendly territory", 
+			"Never appears as a Barbarian unit"
+		   ],
+		"attackSound": "shot"
+	},
+*/	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	{
+		"name": "Worker",
+		"unitType": "Civilian",
+		"movement": 2,
+		"uniques": [
+			"Can build [Land] improvements on tiles", 
+			"Automation is a primary action",
+			"Limited to [2] per Civilization"
+			],
+		"cost": 70,
+		
+	},
+	{
+		"name": "Work Boats",
+		"unitType": "Civilian Water",
+		"movement": 4,
+		"cost": 30,
+		"requiredTech": "Sailing",
+		"uniques": [
+			"Cannot enter ocean tiles <before discovering [Astronomy]>", 
+			"May create improvements on water resources",
+			"Uncapturable", 
+			"Automation is a primary action",
+			"Limited to [2] per Civilization"
+		   ]
+	},
+	{
+		"name": "Settler",
+		"unitType": "Civilian",
+		"movement": 2,
+		"cost": 106,
+		"uniques": [
+			"Limited to [3] per Civilization",
+			"Founds a new city", 
+			"Excess Food converted to Production when under construction",
+			"Can move immediately once bought", 
+			"Requires at least [2] population",
+			"[+3] Sight <before the [Classical era]>",
+			"[+2] Movement <before the [Classical era]>",
+			"Can see over obstacles <before the [Classical era]>"
+		],
+		"hurryCostModifier": 20
+	},
+	{
+		"name": "Scout",
+		"unitType": "Scout",
+		"movement": 2,
+		"strength": 5,
+		"cost": 25,
+		"obsoleteTech": "Scientific Theory",
+		"uniques": [
+			"Limited to [2] per Civilization",
+			"May upgrade to [Archer] through ruins-like effects", 
+			"Never appears as a Barbarian unit"
+			],
+		"promotions": ["Ignore terrain cost"],
+		"attackSound": "nonmetalhit",
+	},
+	{
+		"name": "Missionary",
+		"unitType": "Civilian",
+		"uniques": [
+			"Limited to [1] per Civilization",
+			"Can Spread Religion <for [4] movement> <[2] times> <after which this unit is consumed>",
+			"May enter foreign tiles without open borders, but loses [250] religious strength each turn it ends there",
+			"Can be purchased with [Faith] [in all cities in which the majority religion is a major religion]",
+			"[-1] Sight", 
+			"Unbuildable", 
+			"Religious Unit", 
+			"Only available <when religion is enabled>"],
+		"movement": 4,
+		"religiousStrength": 1000,
+	},
+	{
+		"name": "Inquisitor",
+		"unitType": "Civilian",
+		"uniques": [
+			"Prevents spreading of religion to the city it is next to",
+			"Can remove other religions from cities <in [Friendly] tiles> <once> <after which this unit is consumed>",
+			"Can be purchased with [Faith] [in all cities in which the majority religion is a major religion]",
+			"[+1] Sight", 
+			"Only available <when religion is enabled>", 
+			"Unbuildable", 
+			"Religious Unit"
+		],
+		"movement": 3
+	},
+/*	
+	{
+		"name": "Founder",
+		"unitType": "Civilian",
+		"strength": 50,
+		"movement": 10,
+		"cost": 7770000,
+		"uniques": [
+			"Founds a new city", 
+			"Excess Food converted to Production when under construction", 
+			"Uncapturable", 
+			"Can move immediately once bought", 
+			"Requires at least [4] population", 
+			"All tiles cost 1 movement",
+			"Never appears as a Barbarian unit", 
+			"Cannot attack", 
+			"Unable to capture cities",
+			"Unbuildable"
+		],
+		"promotions": [
+			"Founder's Frontier",
+			"Woodsman"
+		]
+		"hurryCostModifier": 700
+	},
+*/	
+	{
+		"name": "Great Artist",
+		"unitType": "Civilian",
+		"uniques": [
+			"Limited to [1] per Civilization",
+			"Empire enters a [10]-turn Golden Age <by consuming this unit>",
+			"Can instantly construct a [Landmark] improvement <by consuming this unit>", 
+			"Great Person - [Culture]", 
+			"Can move immediately once bought", 
+			"Unbuildable", 
+			"Uncapturable"
+		],
+		"movement": 2
+	},
+	
+	{
+		"name": "Great Scientist",
+		"unitType": "Civilian",
+		"uniques": [
+			"Limited to [1] per Civilization",
+			"Can hurry technology research", 
+			"Can instantly construct a [Academy] improvement <by consuming this unit>", 
+			"Great Person - [Science]", 
+			"Can move immediately once bought", 
+			"Unbuildable", 
+			"Uncapturable"
+		],
+		"movement": 2
+	},
+	
+	{
+		"name": "Great Merchant",
+		"unitType": "Civilian",
+		"uniques": [
+			"Limited to [1] per Civilization",
+			"Can undertake a trade mission with City-State, giving a large sum of gold and [30] Influence",
+			"Can instantly construct a [Customs house] improvement <by consuming this unit>", 
+			"Great Person - [Gold]", 
+			"Can move immediately once bought", 
+			"Unbuildable", 
+			"Uncapturable"
+		],
+		"movement": 2
+	},
+	
+	{
+		"name": "Great Engineer",
+		"unitType": "Civilian",
+		"uniques": [
+			"Limited to [1] per Civilization",
+			"Can speed up construction of a building", 
+			"Can instantly construct a [Manufactory] improvement <by consuming this unit>", 
+			"Great Person - [Production]", 
+			"Can move immediately once bought", 
+			"Unbuildable", 
+			"Uncapturable"
+		],
+		"movement": 2
+	},
+	
+	{
+		"name": "Great Prophet",
+		"unitType": "Civilian",
+		"uniques": [
+			"Limited to [1] per Civilization",
+			"Can instantly construct a [Holy site] improvement <by consuming this unit>", 
+			"Can Spread Religion <[4] times> <by consuming this unit>",
+			"Removes other religions when spreading religion", 
+			"May found a religion", 
+			"May enhance a religion", 
+			"May enter foreign tiles without open borders", 
+			"[-1] Sight", 
+			"Great Person - [Faith]", 
+			"Can move immediately once bought", 
+			"Unbuildable", 
+			"Religious Unit", 
+			"Only available <when religion is enabled>",
+			"Takes your religion over the one in their birth city"
+		],
+		"movement": 2,
+		"religiousStrength": 1000
+	},
+	
+	{
+		"name": "Great General",
+		"unitType": "Civilian",
+		"uniques": [
+			"Limited to [1] per Civilization",
+			"Empire enters a [10]-turn Golden Age <by consuming this unit>",
+			"[+35]% Strength bonus for [Military] units within [2] tiles", 
+			"All adjacent units heal [+15] HP when healing", 
+			"[+15] HP when healing",
+			"Can instantly construct a [Citadel] improvement <by consuming this unit>",
+			"Great Person - [War]", 
+			"Can move immediately once bought", 
+			"Unbuildable", 
+			"Uncapturable"
+		],
+		"movement": 2
+	},
+	
+	{
+		"name": "Khan",
+		"unitType": "Mounted",
+		"uniqueTo": "Mongolia",
+		"replaces": "Great General",
+		"strength": 20,
+		"uniques": [
+			"Limited to [1] per Civilization",
+			"Empire enters a [10]-turn Golden Age <by consuming this unit>",
+			"[+35]% Strength bonus for [Military] units within [2] tiles", 
+			"All adjacent units heal [+30] HP when healing", 
+			"[+15] HP when healing", 
+			"Can instantly construct a [Citadel] improvement <by consuming this unit>", 
+			"Great Person - [War]", 
+			"Can move immediately once bought",
+			"Unbuildable", 
+			"Uncapturable"
+		],
+		"promotions": ["Medic II", "Adaptive Warfare"],
+		"movement": 6
+	},
+	
+	{
+		"name": "Great Admiral",
+		"unitType": "Civilian Water",
+		"uniques": [
+			"Limited to [1] per Civilization",
+			"Empire enters a [10]-turn Golden Age <by consuming this unit>",
+			// TODO: "[Every adjacent [{Friendly} {Water}] unit] heals [100] HP <by consuming this unit>",
+			"May Paradrop to [{your} {Coastal} {City center}] tiles up to [25] tiles away <in [City center] tiles>", // Change Port
+			"[+15]% Strength bonus for [{Military} {Water}] units within [2] tiles",
+			"Can be earned through combat <for [Water] units>",
+			"Is part of Great Person group [Admiral]",
+			"Great Person - [War]", 
+			"Unbuildable", 
+			"Uncapturable"
+			],
+		"movement": 4
+	},
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	//xsa//sandboxer
+	
+	{
+		"name": "Sandbox Shelter",
+				"requiredBuilding": "MiniCake Sandboxer",
+		"unitType": "Sandboxer",
+		"movement": 512,
+		"cost": 1,
+		"hurryCostModifier": 0,
+		"uniques": [
+			"Never appears as a Barbarian unit",
+			"Only available <in cities with a [MiniCake Sandboxer]>",
+			"Cannot attack",
+			"Founds a new city",
+		 		"Only available <for [Human player] Civilizations> <hidden from users>",
+		]
+	},
+	{
+		"name": "Sandbox Melee",
+				"requiredBuilding": "MiniCake Sandboxer",
+		"unitType": "Sandboxer",
+		"strength": 32767,
+		"movement": 512,
+		"cost": 1,
+		"hurryCostModifier": 0,
+		"uniques": [
+			"Never appears as a Barbarian unit",
+			"Only available <in cities with a [MiniCake Sandboxer]>",
+			"Can move after attacking",
+			"May Paradrop up to [16] tiles from inside friendly territory",
+			"Unit will heal every turn, even if it performs an action",
+			"Can see over obstacles",
+			"Can see invisible [All] units",
+			"May capture killed [All] units",
+			"[2] Sight <for [Embarked] units>",
+			"May attack when embarked",
+			"[+100]% Strength <when defending>", 
+			"Eliminates combat penalty for attacking across a coast",
+			"Eliminates combat penalty for attacking over a river",
+			"[1] Movement point cost to embark",
+			"[256] additional attacks per turn",
+		 		"Only available <for [Human player] Civilizations> <hidden from users>",
+		]
+	},
+	{
+		"name": "Sandbox Shooter",
+				"requiredBuilding": "MiniCake Sandboxer",
+		"unitType": "Sandboxer",
+		"strength": 32767,
+		"rangedStrength": 32767,
+		"movement": 512,
+		"cost": 1,
+		"hurryCostModifier": 0,
+		"uniques": [
+			"Never appears as a Barbarian unit",
+			"Only available <in cities with a [MiniCake Sandboxer]>",
+			"Can move after attacking",
+			"[4] Range",
+			"Ranged attacks may be performed over obstacles",
+			"Blast radius [2]",
+			"May Paradrop up to [16] tiles from inside friendly territory",
+			"Unit will heal every turn, even if it performs an action",
+			"Can see over obstacles",
+			"Can see invisible [All] units",
+			"May capture killed [All] units",
+			"[2] Sight <for [Embarked] units>",
+			"May attack when embarked",
+			"+100% Strength when defending (when Embarked)", 
+			"Eliminates combat penalty for attacking across a coast",
+			"Eliminates combat penalty for attacking over a river",
+			"[1] Movement point cost to embark",
+			"[256] additional attacks per turn",
+		 		"Only available <for [Human player] Civilizations> <hidden from users>",
+		]
+	},
+	{
+		"name": "Sandbox Road Builder",
+				"requiredBuilding": "MiniCake Sandboxer",
+		"unitType": "Sandboxer",
+		"movement": 512,
+		"cost": 1,
+		"hurryCostModifier": 0,
+		"uniques": [
+			"Never appears as a Barbarian unit",
+			"Only available <in cities with a [MiniCake Sandboxer]>",
+			"Cannot attack",
+			"-99% construction time for any improvements",
+			"Can build [Land] improvements on tiles",
+		 		"Only available <for [Human player] Civilizations> <hidden from users>",
+		]
+	},
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+//xsa//utility cheat
+
+ {
+		"name": "Stronger General",
+				"requiredBuilding": "MiniCake UCheat",
+		"unitType": "Class S Great People",
+		"uniques": [ 
+			"Only available <in cities with a [MiniCake UCheat]> <hidden from users>",
+			"Empire enters a [50]-turn Golden Age <by consuming this unit>",
+			"[+667]% Strength bonus for [Military] units within [5] tiles",
+			"All adjacent units heal [+100] HP when healing", 
+			"[+100] HP when healing",
+			"Uncapturable",
+			"Only available <for [Human player] Civilizations> <hidden from users>"],
+		"movement": 5
+			 "cost": 0
+			 "hurryCostModifier": 0
+ },
+ {
+	  "name": "Normal Worker",
+				"requiredBuilding": "MiniCake UCheat",
+	 "unitType": "Class S Civilian",
+	 "uniques": [ 
+			"Only available <in cities with a [MiniCake UCheat]> <hidden from users>",
+			"Can be purchased for [0] [Gold] [in this city]",
+			"Can build [Land] improvements on tiles",
+			"Can build [Water] improvements on tiles",
+			"[-99]% construction time for [All] improvements",
+			"Uncapturable",
+		 		"Only available <for [Human player] Civilizations> <hidden from users>"
+			 ],
+	 "movement": 2
+			 "cost": 0
+			 "hurryCostModifier": 0
+ },
+ {
+	  "name": "Prophet",
+				"requiredBuilding": "MiniCake UCheat",
+	 "unitType": "Class S Civilian",
+	 "uniques": [ 
+			 "Only available <in cities with a [MiniCake UCheat]> <hidden from users>",
+			 "Religious Unit",
+			 "May enhance a religion",
+			 "May found a religion",
+			 "Can Spread Religion",
+			 "Removes other religions when spreading religion",
+			 "May enter foreign tiles without open borders",
+			 "Only available <when religion is enabled>",
+			 "Takes your religion over the one in their birth city",
+			 "Uncapturable",
+		 		"Only available <for [Human player] Civilizations> <hidden from users>"
+			 ],
+			"movement": 2
+			 "cost": 0
+			 "hurryCostModifier": 0
+ },
+ {
+	"name": "Invulnerable Trooper",
+				"requiredBuilding": "MiniCake UCheat",
+	 "unitType": "Class S Trooper",
+	 "uniques": [ 
+		 "Only available <in cities with a [MiniCake UCheat]> <hidden from users>",
+		 "Can be purchased for [0] [Gold] [in this city]",
+		 "[Invulnerable Trooper] units gain the [More Invulnerability] promotion",
+		 "Uncapturable",
+		 		"Only available <for [Human player] Civilizations> <hidden from users>"
+			 ]
+	 "strength": 50
+	 "movement": 2
+			 "cost": 0
+			 "hurryCostModifier": 0
+ },
+ { 
+	 "name": "Normal Settler",
+				"requiredBuilding": "MiniCake UCheat",
+	 "unitType": "Class S Civilian",
+	 "uniques": [ 
+		 "Only available <in cities with a [MiniCake UCheat]> <hidden from users>",
+		 "Founds a new city",
+		 "Can be purchased for [0] [Gold] [in this city]",
+		 "Uncapturable",
+		 		"Only available <for [Human player] Civilizations> <hidden from users>"
+			 ]
+	 "movement": 2
+	 "cost": 0
+	 "hurryCostModifier": 0
+ },
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	  //xsa//added//civilian
+  {
+	"name": "CakeWorker",
+	"unitType": "Civilian",
+	"movement": 20,
+	"range": 20,
+	"cost": 99,
+	"hurryCostModifier": 99,
+	"uniques": [
+		"Automation is a primary action",
+
+		"May travel on Water tiles without embarking",			 //xsa//added hovering
+		"Never appears as a Barbarian unit"
+		"May Paradrop to [All] tiles up to [20] tiles away", 
+		"Limited to [1] per Civilization <hidden from users>",
+		"Uncapturable",
+		"Never appears as a Barbarian unit",
+		"Can build [All] improvements at a [+100]% rate",
+		"Can build [All] improvements on tiles",
+		"Can instantly construct a [All] improvement",
+		"Can move immediately once bought",
+		"May create improvements on water resources",
+		"Only available <for [Human player] Civilizations> <hidden from users>"
+	  ]
+  },
+  {
+	"name": "CakeForger",
+	"unitType": "Civilian",
+	"movement": 20,
+	"range": 20,
+	"cost": 99,
+	"hurryCostModifier": 99,
+	"uniques": [
+	  "May travel on Water tiles without embarking",			 //xsa//added hovering
+			"Never appears as a Barbarian unit"
+			"May Paradrop to [All] tiles up to [20] tiles away", 
+		"Limited to [1] per Civilization <hidden from users>",
+		"Uncapturable",
+		"Never appears as a Barbarian unit",
+		"Can move immediately once bought",
+		"Founds a new city",
+		"Only available <for [Human player] Civilizations> <hidden from users>"
+	]
+  },
+  
+	  {
+		  "name":"Tunnel Worker",
+		  "unitType":"Civilian",
+		  "movement": 3,
+		  "cost": 150,
+		  "requiredTech": "Dynamite",
+		  "uniques":[
+	  "May travel on Water tiles without embarking",			 //xsa//added hovering
+			"Never appears as a Barbarian unit"
+			"Uncapturable",
+			"May Paradrop to [All] tiles up to [20] tiles away", 
+				"Limited to [1] per Civilization <hidden from users>",
+  				"Turn this tile into a [Mountain Tunnel] tile <by consuming this unit> <in [Mountain] tiles> <in tiles adjacent to [Mountain] tiles> <costs [+300 Gold] stats> <after discovering [Dynamite]>",			   
+  				"Can pass through impassable tiles <hidden from users>",
+		  		"Only available <for [Human player] Civilizations> <hidden from users>"
+		  ]
+	  },
+	  {
+			"name": "Ice Breaker",
+			"unitType": "Civilian Water",
+			"movement": 5,
+		  	"requiredTech": "Combustion",
+				"uniques": [
+	  "May travel on Water tiles without embarking",			 //xsa//added hovering
+			"Never appears as a Barbarian unit"
+			"Uncapturable",
+			"May Paradrop to [All] tiles up to [20] tiles away", 
+					"Limited to [1] per Civilization <hidden from users>",
+					"Can build [Water] improvements on tiles",
+					"Can enter ice tiles",
+					"Can build [Remove Ice] improvements on tiles",
+					"Only available <for [Human player] Civilizations> <hidden from users>"
+				],
+			"cost": 325
+		},
+
+/*		
+	{
+		"name": "Great People",
+		"unitType": "Civilian",
+
+		"uniques": [
+			"Empire enters a [50]-turn Golden Age <by consuming this unit>",
+//			"Can instantly construct a [Farmyard] improvement <by consuming this unit>",
+			"Great Person - [Food]", "Unbuildable", "Uncapturable",
+			"Only available <for [Human player] Civilizations> <hidden from users>"
+		],
+
+		"movement": 2
+	},
+*/
+
+	
+//xsa//unciv godmod
+	{
+		"name": "Angel",
+		"unitType": "Civilian",
+		"uniques": [
+			"Limited to [1] per Civilization <hidden from users>",
+			"Unavailable <hidden from users>",
+			"Unbuildable <hidden from users>",
+			"Uncapturable <hidden from users>",
+//			"Reveals the entire map",
+//			"Only available <for [Human player] Civilizations> <hidden from users>",
+			"Gain a free [Divine Gate] [in capital] <by consuming this unit>"
+		],
+		"movement": 2
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+]
+
+
+  //xsa//
+  
+  //xsa//added requiredResource
+  //xsa//added hovering
+  //xsa//rangeMod
+  
+  //xsa//increased range 1 to 2 for Gatling gun,Machine gun
+  //xsa//spaceparts//100x costs
+  //xsa//airunit
+  //xsa//civilian
+  /*
+  added icebreaker
+  added mountain tunnel
+  added Great People
+  */
+  
+
+  
+  
+//xsa//need2fix xsabuilding
+  
+  
+  
+  
+ 
+ 
