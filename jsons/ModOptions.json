@@ -1,0 +1,108 @@
+{
+	"modUrl": "gargel.ncr.or.plio.otg.org.ccr.yyz.qqe.666.btu",
+	  "author": "ArchCake",
+	"isBaseRuleset": false,
+	"constants": {
+		"minimumWarDuration": 999999,
+	  "naturalWonderCountAddedConstant":14,
+	  "maxXPfromBarbarians": 10000,
+	  "ancientRuinCountMultiplier":1,
+	  "cityWorkRange": 5,
+	  "cityStrengthPerPop": 1,
+	  "baseCityBombardRange": 5,
+	  "cityAirUnitCapacity": 5,
+//	  "minimalCityDistance": 5,
+	  "minimalCityDistanceOnDifferentContinents": 4
+	},
+	VictoryTypesToRemove": {
+//		"Annihilation",
+		"Scientific",
+		"Cultural",
+//		"Religion",
+		"Domination",
+		"Diplomatic",
+		"Time"
+	}
+  }
+  
+
+  
+  
+  
+  //xsa//perfectly balanced
+  /*
+
+{
+	"buildingsToRemove": [
+		"Stele",
+		"Pyramid",
+		"Paper Maker",
+		"Floating Gardens",
+		"Walls of Babylon",
+		"Krepost",
+		"Burial Tomb",
+		"Mud Pyramid Mosque",
+		"Bazaar",
+		"Longhouse",
+		"Wat",
+		"Mughal Fort",
+		"Ceilidh Hall",
+		"Satrap's Court",
+		// "Hanse", // Will be introduced in BNW expansion pack
+		"Coffee House"
+	],
+	"unitsToRemove": [
+		"Maori Warrior",
+		"Jaguar",
+		"Bowman",
+		"Slinger",
+		"Atlatlist",
+		"Quinquereme",
+		"Dromon",
+		"War Chariot",
+		"Horse Archer",
+		"War Elephant",
+		"Hoplite",
+		"Persian Immortal",
+		"Battering Ram",
+		"Pictish Warrior",
+		"Companion Cavalry",
+		"African Forest Elephant",
+		"Cataphract",
+		"Ballista",
+		"Legion",
+		"Mohawk Warrior",
+		"Landsknecht", // Should be removed in BNW expansion pack
+		"Camel Archer",
+		"Conquistador",
+		"Naresuan's Elephant",
+		"Mandekalu Cavalry",
+		"Keshik",
+		"Chu-Ko-Nu",
+		"Longbowman",
+		"Hwach'a",
+		"Samurai",
+		"Berserker",
+		"Turtle Ship",
+		"Musketeer",
+		"Janissary",
+		"Minuteman",
+		"Tercio",
+		"Sea Beggar",
+		"Ship of the Line",
+		"Sipahi",
+		"Hakkapeliitta",
+		"Norwegian Ski Infantry",
+		"Carolean",
+		"Mehal Sefari",
+		"Cossack",
+		"Hussar",
+		"Foreign Legion",
+		"Zero",
+		"B17",
+		"Panzer",
+		"Khan"
+	]
+}
+
+*/
